@@ -1,0 +1,20 @@
+@import "./../../../mixins";
+@import "./../../../variables";
+
+.header {
+	&__nav {
+		padding: 10px;
+
+		&-list {
+			display: flex;
+			gap: 20px;
+			@include listReset;
+		}
+
+		&-item a {
+			color: $primary-color;
+			@include linkReset;
+			@include linkStates;
+		}
+	}
+}

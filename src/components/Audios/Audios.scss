@@ -1,0 +1,27 @@
+@import "./../../variables";
+@import "./../../mixins";
+
+.audios {
+	display: grid;
+	justify-content: center;
+	@include listReset;
+
+	@include above($tablet) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@include above($desktop) {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	&__item {
+
+		ul {
+			@include listReset;
+
+			* img {
+				width: 100%;
+			}
+		}
+	}
+}

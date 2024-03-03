@@ -1,0 +1,74 @@
+@import "variables";
+@import "mixins";
+
+html {
+	height: 100%;
+	font-size: 12px;
+
+	@include above($tablet) {
+		font-size: 14px;
+	}
+
+	@include above($desktop) {
+		font-size: 16px;
+	}
+}
+
+body {
+	margin: 0;
+	height: 100%;
+	font-family: $primary-font;
+	font-size: 1.2rem;
+	color: $primary-color;
+	font-weight: $medium-font;
+	background-color: $bg-color;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	object-fit: contain;
+}
+
+.container {
+	max-width: $desktop;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+.page-wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+.main {
+	min-height: 100%;
+	flex-grow: 1;
+}
+
+.header {
+	background-color: #c01616;
+	min-height: 50px;
+}
+
+.footer {
+	background-color: #ed0505;
+	min-height: 50px;
+}
+
+#app {
+	height: 100%;
+}
+
+.phone {
+	@include linkReset;
+	@include linkStates;
+
+}

@@ -1,0 +1,30 @@
+@import "./../../../mixins";
+@import "./../../../variables";
+
+.footer {
+
+	&__wrapper {
+		display: grid;
+		justify-content: center;
+		gap: 10px;
+
+		@include above($tablet) {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+	}
+
+	&__list {
+		display: grid;
+		flex-basis: 200px;
+		@include listReset;
+
+		a {
+			@include linkStates;
+			@include linkReset;
+			color: $primary-color;
+			font-size: 1.2rem;
+		}
+	}
+}

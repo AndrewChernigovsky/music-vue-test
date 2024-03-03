@@ -1,0 +1,33 @@
+@mixin listReset {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+@mixin above($breakpoint) {
+	@media screen and (min-width: $breakpoint) {
+		@content;
+	}
+}
+
+@mixin linkReset {
+	text-decoration: none;
+}
+
+@mixin linkStates() {
+	transition: 0.3s ease-in-out;
+	border: 1px solid transparent;
+
+	&:hover {
+		opacity: 0.6;
+	}
+
+
+	&:active {
+		color: $secondary-color;
+	}
+
+	&:focus {
+		border: 1px solid $primary-color;
+	}
+}

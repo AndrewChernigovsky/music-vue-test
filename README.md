@@ -1,7 +1,13 @@
-# Vue 3 + Vite
+# Музыкальный плеймаркет на основе Vite, Vue3 js, Vuex
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+В проекте я старался разобраться как работает store, vuex, а также базовые принципы работы со Vue.
+Пока дается сложно, что-то получилось сделать, что-то нет.
+Я старался разделять логику на компоненты и хранилище также разбил на модули.
+Думаю в будущем я смогу очень быстро и качественно писать подобные задачи, а пока вот такой промежуточный результат.
 
-## Recommended IDE Setup
+npm ci
+npm run dev
+npm run build
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+node ^20
+npm ^10

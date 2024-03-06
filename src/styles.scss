@@ -53,13 +53,9 @@ img {
 	flex-grow: 1;
 }
 
-.header {
-	background-color: #c01616;
-	min-height: 50px;
-}
-
+.header,
 .footer {
-	background-color: #ed0505;
+	background-color: $bg-color-additonal;
 	min-height: 50px;
 }
 
@@ -70,5 +66,14 @@ img {
 .phone {
 	@include linkReset;
 	@include linkStates;
+}
 
+.button {
+	border: 1px solid transparent;
+	outline: none;
+	background-color: transparent;
+	color: $primary-color;
+	cursor: pointer;
+
+	@include linkStates;
 }

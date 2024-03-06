@@ -1,0 +1,19 @@
+@import "./../../variables";
+@import "./../../mixins";
+
+.audio {
+
+	&__track {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+
+		audio {
+			flex-basis: 70%;
+
+			@include above($tablet) {
+				flex-basis: auto;
+			}
+		}
+	}
+}

@@ -31,3 +31,18 @@
 		border: 1px solid $primary-color;
 	}
 }
+
+@mixin pseudo($width, $height, $color, $position: null) {
+	content: '';
+	position: absolute;
+
+	@if($position==null) {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	width: $width;
+	height: $height;
+	background-color: $color;
+}

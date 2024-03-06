@@ -12,6 +12,7 @@ import Header from "./components/layout/Header/Header";
 import Main from "./components/layout/Main/Main";
 import Footer from "./components/layout/Footer/Footer";
 import data from "./../data.json";
+import { useStore } from "vuex";
 
 export default {
 	name: "App",
@@ -21,16 +22,12 @@ export default {
 		Main,
 		Footer
 	},
-
-	async mounted() {
-		try {
-			setTimeout(() => {
-				this.data = data;
-				this.$store.commit("getData", this.data);
-			}, 200)
-		} catch (err) {
-			console.log(err);
-		}
+	setup() {
+		const store = useStore();
+		return { store };
+	},
+	mounted() {
+		this.store.commit("getData", this.data);
 	},
 	data() {
 		return {

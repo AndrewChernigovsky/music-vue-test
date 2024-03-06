@@ -1,6 +1,6 @@
 <template>
 	<div class="wrapper">
-		<h1>{{ $store.state.title }}</h1>
+		<h1>Домашняя страница</h1>
 		<Audios />
 	</div>
 </template>

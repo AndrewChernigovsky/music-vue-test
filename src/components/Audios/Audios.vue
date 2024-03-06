@@ -8,7 +8,7 @@
 
 <script>
 import { useStore } from "vuex";
-import { computed, ref } from "vue";
+import { computed } from "vue";
 import Audio from "./../Audio/Audio";
 
 

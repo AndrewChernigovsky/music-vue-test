@@ -1,0 +1,46 @@
+@import "./../../../variables.scss";
+@import "./../../../mixins.scss";
+
+.button.buttonAddTrack {
+	position: relative;
+	font-size: 1.5rem;
+	border: 1px solid $primary-color;
+	min-width: 50px;
+	min-height: 50px;
+	border-radius: 50px;
+
+	&::before,
+	&::after {
+		@include pseudo(30px, 2px, $primary-color);
+		transition: 0.3s ease-in-out;
+	}
+
+	&::after {
+		transform: translate(-50%, -50%) rotate(90deg);
+	}
+
+	&.active {
+		&::after {
+			transform: translate(-50%, -50%) rotate(-180deg);
+		}
+	}
+}
+
+.button.added {
+	position: relative;
+	font-size: 1.5rem;
+	border: 1px solid $primary-color;
+	min-width: 50px;
+	min-height: 50px;
+	border-radius: 50px;
+
+	&::before,
+	&::after {
+		@include pseudo(30px, 2px, $primary-color);
+		transition: 0.3s ease-in-out;
+	}
+
+	&::after {
+		background-image: url("./approve.svg");
+	}
+}

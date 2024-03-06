@@ -3,10 +3,10 @@
 
 .audios {
 	display: grid;
-	justify-content: center;
 	@include listReset;
 
 	@include above($tablet) {
+		justify-content: center;
 		grid-template-columns: repeat(2, 1fr);
 	}
 
@@ -18,10 +18,6 @@
 
 		ul {
 			@include listReset;
-
-			* img {
-				width: 100%;
-			}
 		}
 	}
 }
